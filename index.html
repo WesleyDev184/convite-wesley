@@ -6,16 +6,93 @@
     <title>Wesley · The Graduation Tour</title>
   </head>
   <body>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <radialGradient id="vinyl-shade" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#1c1c20" />
+          <stop offset="100%" stop-color="#0c0c0e" />
+        </radialGradient>
+        <symbol id="disc" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="98" fill="url(#vinyl-shade)" />
+          <g fill="none" stroke="#26262b" stroke-width="1">
+            <circle cx="100" cy="100" r="90" /><circle cx="100" cy="100" r="80" /><circle cx="100" cy="100" r="70" />
+            <circle cx="100" cy="100" r="60" /><circle cx="100" cy="100" r="50" />
+          </g>
+          <circle cx="100" cy="100" r="36" fill="#d6b46a" />
+          <circle cx="100" cy="100" r="31" fill="none" stroke="#c9464f" stroke-width="1.2" />
+          <circle cx="100" cy="100" r="3" fill="#08080a" />
+        </symbol>
+        <symbol id="divider" viewBox="0 0 260 24">
+          <g stroke="#d6b46a" stroke-width="1" fill="none">
+            <path d="M0 12 H96 M164 12 H260" />
+            <path d="M112 12 a18 18 0 0 1 36 0 a18 18 0 0 1 -36 0" stroke-opacity=".6" />
+            <circle cx="130" cy="12" r="3" fill="#d6b46a" />
+            <circle cx="96" cy="12" r="2" /><circle cx="164" cy="12" r="2" />
+          </g>
+        </symbol>
+        <symbol id="pick" viewBox="0 0 60 70">
+          <path d="M30 68 C14 52 2 34 2 18 C2 7 14 2 30 2 C46 2 58 7 58 18 C58 34 46 52 30 68 Z" fill="none" stroke="#d6b46a" stroke-width="2" />
+          <text x="30" y="34" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="14" fill="#d6b46a" letter-spacing="1">W</text>
+        </symbol>
+        <symbol id="icon-calendar" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+            <rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" />
+          </g>
+        </symbol>
+        <symbol id="icon-pin" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12Z" /><circle cx="12" cy="10" r="2.5" />
+          </g>
+        </symbol>
+      </defs>
+    </svg>
+    <div id="mini-player" aria-hidden="true">
+      <svg viewBox="0 0 64 64">
+        <g class="mini-disc"><use href="#disc" x="4" y="4" width="56" height="56" /></g>
+        <g class="mini-needle"><path d="M58 4 L40 30" stroke="#f3ead7" stroke-width="2" stroke-linecap="round" /><circle cx="58" cy="4" r="3.5" fill="#d6b46a" /></g>
+      </svg>
+    </div>
     <main>
       <section id="abertura" class="section hero">
         <p class="side-label">LADO A</p>
+        <div class="turntable" aria-hidden="true">
+          <svg id="hero-vinyl" viewBox="0 0 200 200">
+            <g class="vinyl-disc">
+              <use href="#disc" width="200" height="200" />
+              <g class="vinyl-label">
+                <text x="100" y="94" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="13" fill="#0d0d0f" letter-spacing="1">WESLEY</text>
+                <text x="100" y="114" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="4.6" fill="#0d0d0f">CIÊNCIA DA COMPUTAÇÃO</text>
+              </g>
+            </g>
+            <path d="M28 62 A80 80 0 0 1 62 26" stroke="#ffffff" stroke-opacity=".10" stroke-width="7" fill="none" stroke-linecap="round" />
+            <path d="M172 138 A80 80 0 0 1 138 174" stroke="#ffffff" stroke-opacity=".06" stroke-width="7" fill="none" stroke-linecap="round" />
+          </svg>
+          <svg id="hero-tonearm" viewBox="0 0 120 220">
+            <circle cx="92" cy="22" r="16" fill="#141417" stroke="#d6b46a" stroke-width="1.5" />
+            <g class="tonearm-arm">
+              <path d="M92 22 L92 120 L62 172" fill="none" stroke="#cfc6b2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+              <rect x="50" y="166" width="22" height="13" rx="2" transform="rotate(-30 61 172)" fill="#d6b46a" />
+            </g>
+            <circle cx="92" cy="22" r="6" fill="#d6b46a" />
+          </svg>
+        </div>
         <h1 class="hero-name" data-field="name"></h1>
         <p class="hero-course" data-field="course"></p>
         <p class="hero-title" data-field="tagline.title"></p>
         <p class="hero-subtitle" data-field="tagline.subtitle"></p>
+        <svg class="eq" viewBox="0 0 124 32" aria-hidden="true">
+          <rect class="eq-bar" x="0" y="0" width="8" height="32" /><rect class="eq-bar" x="14" y="0" width="8" height="32" />
+          <rect class="eq-bar" x="28" y="0" width="8" height="32" /><rect class="eq-bar" x="42" y="0" width="8" height="32" />
+          <rect class="eq-bar" x="56" y="0" width="8" height="32" /><rect class="eq-bar" x="70" y="0" width="8" height="32" />
+          <rect class="eq-bar" x="84" y="0" width="8" height="32" /><rect class="eq-bar" x="98" y="0" width="8" height="32" />
+          <rect class="eq-bar" x="112" y="0" width="8" height="32" />
+        </svg>
+        <p class="hero-date"><span data-field="event.dateLabel"></span> · <span data-field="event.timeLabel"></span></p>
+        <p class="scroll-hint" aria-hidden="true">role para tocar ⌄</p>
       </section>
 
       <section id="faixa-01" class="section">
+        <svg class="divider" aria-hidden="true"><use href="#divider" /></svg>
         <p class="section-label">FAIXA 01</p>
         <h2 class="section-title">A trilha sonora</h2>
         <p class="section-body message" data-field="message"></p>
@@ -34,7 +111,7 @@
         <p class="section-label">FAIXA 03</p>
         <h2 class="section-title">O palco</h2>
         <div class="section-body">
-          <p class="venue-name" data-field="venue.name"></p>
+          <p class="venue-name"><svg class="icon" aria-hidden="true"><use href="#icon-pin" /></svg><span data-field="venue.name"></span></p>
           <p class="venue-address" data-requires="venue.address" data-field="venue.address"></p>
           <a class="button" data-requires="venue.mapsUrl" data-href="venue.mapsUrl" target="_blank" rel="noopener">Abrir no Maps</a>
         </div>
@@ -45,11 +122,21 @@
         <h2 class="section-title">Contagem regressiva</h2>
         <div class="section-body">
           <div id="countdown" class="countdown" aria-live="polite"></div>
-          <button id="add-calendar" class="button" type="button">Adicionar à agenda</button>
+          <svg class="eq" viewBox="0 0 124 32" aria-hidden="true">
+            <rect class="eq-bar" x="0" y="0" width="8" height="32" /><rect class="eq-bar" x="14" y="0" width="8" height="32" />
+            <rect class="eq-bar" x="28" y="0" width="8" height="32" /><rect class="eq-bar" x="42" y="0" width="8" height="32" />
+            <rect class="eq-bar" x="56" y="0" width="8" height="32" /><rect class="eq-bar" x="70" y="0" width="8" height="32" />
+            <rect class="eq-bar" x="84" y="0" width="8" height="32" /><rect class="eq-bar" x="98" y="0" width="8" height="32" />
+            <rect class="eq-bar" x="112" y="0" width="8" height="32" />
+          </svg>
+          <button id="add-calendar" class="button" type="button"><svg class="icon" aria-hidden="true"><use href="#icon-calendar" /></svg>Adicionar à agenda</button>
         </div>
       </section>
 
       <section id="lado-b" class="section">
+        <div class="flip" aria-hidden="true">
+          <svg viewBox="0 0 200 200"><use href="#disc" width="200" height="200" /><text x="100" y="112" text-anchor="middle" font-family="Bebas Neue, sans-serif" font-size="34" fill="#0d0d0f">B</text></svg>
+        </div>
         <p class="section-label">LADO B</p>
         <h2 class="section-title" data-field="rsvp.title"></h2>
         <div class="section-body">
@@ -59,8 +146,10 @@
       </section>
 
       <section id="encerramento" class="section credits">
+        <svg class="divider" aria-hidden="true"><use href="#divider" /></svg>
         <p class="section-label">ENCARTE</p>
         <p class="section-body" data-field="credits"></p>
+        <svg class="pick" aria-hidden="true"><use href="#pick" /></svg>
       </section>
     </main>
     <script type="module" src="/src/main.js"></script>
