@@ -1,7 +1,7 @@
 export const content = {
   siteUrl: 'https://convite-wesley.vercel.app', // trocar se o domínio mudar
   name: 'Wesley',
-  course: 'Bacharel em Ciência da Computação',
+  course: 'Cientista da Computaria',
   tagline: { title: 'The Graduation Tour', subtitle: 'o último show da turnê' },
   message:
     'Foram anos de noites em claro, provas, código que não compilava e café que não acabava. Nada disso teria sido possível sem as pessoas que estiveram ao meu lado. Agora chegou a hora de celebrar, e eu quero você comigo.',
