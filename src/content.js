@@ -18,6 +18,7 @@ export const content = {
     { title: 'Churrasco' },
     { title: 'Bar' },
     { title: 'Música' },
+    { title: 'Fim', time: 'até onde aguentar' },
   ],
   venue: {
     name: 'Loja Maçônica Acácia do Araguaia',

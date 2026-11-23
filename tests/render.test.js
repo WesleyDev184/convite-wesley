@@ -35,7 +35,7 @@ describe('renderPage', () => {
     document.body.innerHTML = '<ol data-list="setlist"></ol>';
     renderPage(content);
     const items = document.querySelectorAll('li');
-    expect(items).toHaveLength(4);
+    expect(items).toHaveLength(5);
     expect(items[0].querySelector('.track-num').textContent).toBe('01');
     expect(items[0].querySelector('.track-title').textContent).toBe('Confraternização');
     expect(items[0].querySelector('.track-time').textContent).toBe('19h');
