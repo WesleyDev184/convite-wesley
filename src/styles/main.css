@@ -149,3 +149,5 @@ main { overflow-x: clip; }
 }
 .tally:has(iframe) .tally-help a { color: #5b5346; }
 .tally:has(iframe) .tally-help { color: #5b5346; }
+
+.motion .eq { cursor: pointer; }
