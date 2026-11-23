@@ -2,6 +2,9 @@ import { defineConfig } from 'vite';
 import { JSDOM } from 'jsdom';
 import { content } from './src/content.js';
 import { renderPage } from './src/render.js';
+import { buildIcs } from './src/ics.js';
+
+const ICS_FILE = 'formatura-wesley.ics';
 
 const escapeAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 
@@ -9,6 +12,16 @@ const escapeAttr = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;
 function convite() {
   return {
     name: 'convite-content',
+    // Static .ics: works in iOS Safari's calendar sheet, in-app browsers and without JS.
+    configureServer(server) {
+      server.middlewares.use(`/${ICS_FILE}`, (_req, res) => {
+        res.setHeader('Content-Type', 'text/calendar; charset=utf-8');
+        res.end(buildIcs(content.event, content.venue));
+      });
+    },
+    generateBundle() {
+      this.emitFile({ type: 'asset', fileName: ICS_FILE, source: buildIcs(content.event, content.venue) });
+    },
     transformIndexHtml: {
       order: 'pre',
       handler(html) {

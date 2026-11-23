@@ -6,10 +6,12 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 let html;
+let outDirPath;
 
 beforeAll(async () => {
   const outDir = mkdtempSync(join(tmpdir(), 'convite-build-'));
   await build({ root: process.cwd(), logLevel: 'silent', build: { outDir, emptyOutDir: true } });
+  outDirPath = outDir;
   html = readFileSync(join(outDir, 'index.html'), 'utf8');
 }, 60_000);
 
@@ -36,11 +38,20 @@ describe('built index.html', () => {
     expect(html).toContain('href="https://maps.app.goo.gl/Uh7gPGWeX3BZjBfYA"');
   });
 
-  it('offers the RSVP link without JS', () => {
-    expect(html).toMatch(/<noscript>[\s\S]*href="https:\/\/tally\.so\/r\/Qo7JpG"[\s\S]*Abrir formulário[\s\S]*<\/noscript>/);
-  });
 
   it('links a stylesheet (CSS works without JS)', () => {
     expect(html).toMatch(/<link rel="stylesheet"[^>]*href="\/assets\/[^"]+\.css"/);
+  });
+
+  it('shows the RSVP link before Tally loads (outside noscript)', () => {
+    const container = html.match(/<div id="tally-container"[^>]*>([\s\S]*?)<\/div>/)[1];
+    const outside = container.replace(/<noscript>[\s\S]*?<\/noscript>/g, '');
+    expect(outside).toMatch(/href="https:\/\/tally\.so\/r\/Qo7JpG"[^>]*>Abrir formulário/);
+  });
+
+  it('serves a static .ics and links it from the calendar button', () => {
+    const ics = readFileSync(join(outDirPath, 'formatura-wesley.ics'), 'utf8');
+    expect(ics).toContain('DTSTART:20270116T220000Z');
+    expect(html).toMatch(/<a id="add-calendar"[^>]*href="\/formatura-wesley\.ics"/);
   });
 });

@@ -56,4 +56,10 @@ describe('initMotion', () => {
     const hidden = [...document.querySelectorAll('[style]')].filter((el) => /opacity:\s*0|visibility:\s*hidden/.test(el.getAttribute('style')));
     expect(hidden.map((el) => el.id || el.className)).toEqual([]);
   });
+
+  it.each([true, false])('reveals never remove content from tab order / a11y tree (reduceMotion=%s)', (reduceMotion) => {
+    motion = initMotion({ reduceMotion });
+    const hidden = [...document.querySelectorAll('main [style]')].filter((el) => /visibility:\s*hidden/.test(el.getAttribute('style')));
+    expect(hidden.map((el) => el.id || el.className)).toEqual([]);
+  });
 });

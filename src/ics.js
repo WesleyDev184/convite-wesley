@@ -22,12 +22,3 @@ export function buildIcs(event, venue) {
   ];
   return lines.join('\r\n') + '\r\n';
 }
-
-export function downloadIcs(icsText, filename = 'formatura-wesley.ics') {
-  const url = URL.createObjectURL(new Blob([icsText], { type: 'text/calendar;charset=utf-8' }));
-  const a = Object.assign(document.createElement('a'), { href: url, download: filename });
-  document.body.append(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-}

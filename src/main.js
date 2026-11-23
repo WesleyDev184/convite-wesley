@@ -8,10 +8,8 @@ import './styles/main.css';
 import { content } from './content.js';
 // Content is prerendered into index.html by the Vite plugin (vite.config.js).
 import { startCountdown } from './countdown.js';
-import { buildIcs, downloadIcs } from './ics.js';
 
 startCountdown(document.querySelector('#countdown'), content.event);
-document.querySelector('#add-calendar').addEventListener('click', () => downloadIcs(buildIcs(content.event, content.venue)));
 import { mountTally } from './tally.js';
 
 const tallyContainer = document.querySelector('#tally-container');
