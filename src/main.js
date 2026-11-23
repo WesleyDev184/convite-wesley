@@ -9,3 +9,8 @@ import { content } from './content.js';
 import { renderPage } from './render.js';
 
 renderPage(content);
+import { startCountdown } from './countdown.js';
+import { buildIcs, downloadIcs } from './ics.js';
+
+startCountdown(document.querySelector('#countdown'), content.event);
+document.querySelector('#add-calendar').addEventListener('click', () => downloadIcs(buildIcs(content.event, content.venue)));
