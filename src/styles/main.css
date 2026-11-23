@@ -1,0 +1,14 @@
+:root {
+  --bg: #08080a;
+  --glow: #1a0d10;
+  --ivory: #f3ead7;
+  --gold: #d6b46a;
+  --red: #c9464f;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --poster: 'Bebas Neue', Impact, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ivory); font-family: var(--serif); }
+[hidden] { display: none !important; }

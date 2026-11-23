@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wesley · The Graduation Tour</title>
+  </head>
+  <body>
+    <main>
+      <section id="abertura" class="section hero">
+        <p class="side-label">LADO A</p>
+        <h1 class="hero-name" data-field="name"></h1>
+        <p class="hero-course" data-field="course"></p>
+        <p class="hero-title" data-field="tagline.title"></p>
+        <p class="hero-subtitle" data-field="tagline.subtitle"></p>
+      </section>
+
+      <section id="faixa-01" class="section">
+        <p class="section-label">FAIXA 01</p>
+        <h2 class="section-title">A trilha sonora</h2>
+        <p class="section-body message" data-field="message"></p>
+      </section>
+
+      <section id="faixa-02" class="section">
+        <p class="section-label">FAIXA 02</p>
+        <h2 class="section-title">Setlist</h2>
+        <div class="section-body">
+          <p class="event-date"><span data-field="event.dateLabel"></span> · <span data-field="event.timeLabel"></span></p>
+          <ol class="setlist" data-list="setlist"></ol>
+        </div>
+      </section>
+
+      <section id="faixa-03" class="section" data-requires="venue.name">
+        <p class="section-label">FAIXA 03</p>
+        <h2 class="section-title">O palco</h2>
+        <div class="section-body">
+          <p class="venue-name" data-field="venue.name"></p>
+          <p class="venue-address" data-requires="venue.address" data-field="venue.address"></p>
+          <a class="button" data-requires="venue.mapsUrl" data-href="venue.mapsUrl" target="_blank" rel="noopener">Abrir no Maps</a>
+        </div>
+      </section>
+
+      <section id="faixa-04" class="section">
+        <p class="section-label">FAIXA 04</p>
+        <h2 class="section-title">Contagem regressiva</h2>
+        <div class="section-body">
+          <div id="countdown" class="countdown" aria-live="polite"></div>
+          <button id="add-calendar" class="button" type="button">Adicionar à agenda</button>
+        </div>
+      </section>
+
+      <section id="lado-b" class="section">
+        <p class="section-label">LADO B</p>
+        <h2 class="section-title" data-field="rsvp.title"></h2>
+        <div class="section-body">
+          <p class="deadline" data-field="rsvp.deadlineLabel"></p>
+          <div id="tally-container" class="tally"></div>
+        </div>
+      </section>
+
+      <section id="encerramento" class="section credits">
+        <p class="section-label">ENCARTE</p>
+        <p class="section-body" data-field="credits"></p>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
