@@ -28,7 +28,8 @@ npm run preview  # serve o dist/ em http://localhost:4173
 
 ## Tally
 
-- O formulário aparece num cartão claro, porque o tema do form é claro. Se você mudar o form para tema escuro no Tally, remova o bloco `.tally:has(iframe)` em `src/styles/main.css`.
+- O form usa tema escuro no Tally + `transparentBackground=1`; a página só desenha uma moldura (`.tally:has(iframe)` em `src/styles/main.css`). Se voltar o form para tema claro, o texto fica ilegível sobre o fundo preto.
+- Cor de destaque do form (botão): em Customize, use `#c9464f` (vermelho) ou `#d6b46a` (dourado) para combinar com o convite.
 - O botão de envio aparece como **"Submit"**. Para traduzir, abra o form no editor do Tally, clique no botão e escreva, por exemplo, "Confirmar presença".
 - Para encerrar as confirmações em 26/12/2026: no Tally, **Settings → Close form → Close on a date**.
 - Se o script do Tally falhar (bloqueador, rede ruim), a página mostra o botão "Abrir formulário" no lugar.
