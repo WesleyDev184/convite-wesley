@@ -52,10 +52,10 @@ describe('built index.html', () => {
   it('serves a static .ics and links it from the calendar button', () => {
     const ics = readFileSync(join(outDirPath, 'formatura-wesley.ics'), 'utf8');
     expect(ics).toContain('DTSTART:20270116T220000Z');
-    expect(html).toMatch(/<a id="add-calendar"[^>]*href="\/formatura-wesley\.ics"/);
+    expect(html).toMatch(/<a id="calendar-alt"[^>]*href="\/formatura-wesley\.ics"/);
   });
 
-  it('links Google Calendar from the second button', () => {
-    expect(html).toMatch(/<a id="add-google"[^>]*href="https:\/\/calendar\.google\.com\/calendar\/render\?action=TEMPLATE[^"]*dates=20270116T220000Z\/20270117T030000Z/);
+  it('the single calendar button defaults to Google Calendar (no JS / desktop / Android)', () => {
+    expect(html).toMatch(/<a id="add-calendar"[^>]*href="https:\/\/calendar\.google\.com\/calendar\/render\?action=TEMPLATE[^"]*dates=20270116T220000Z\/20270117T030000Z/);
   });
 });

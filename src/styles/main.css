@@ -200,7 +200,6 @@ main { overflow-x: clip; }
 .reward p { margin: 0 0 1.25rem; }
 .reward-close { margin-top: 1rem; background: none; border: 0; color: #bdb5a4; font: .8rem var(--mono); text-decoration: underline; cursor: pointer; padding: .75rem; }
 
-/* Agenda: Google + .ics */
-.calendar-label { font-family: var(--mono); font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; color: #bdb5a4; margin: 0 0 .75rem; }
-.calendar-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: .6rem; }
-.calendar-buttons .button { margin: 0; padding-inline: 1.1rem; min-width: 13.5rem; }
+/* Agenda: um botão (Google ou .ics conforme o aparelho) + link alternativo */
+.calendar-alt { font-family: var(--mono); font-size: .72rem; margin: .9rem 0 0; }
+.calendar-alt a { color: #bdb5a4; }

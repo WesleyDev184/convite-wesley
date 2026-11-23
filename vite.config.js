@@ -32,7 +32,7 @@ function convite() {
           .replaceAll('%SITE_URL%', escapeAttr(content.siteUrl));
         const dom = new JSDOM(withMeta);
         renderPage(content, dom.window.document);
-        dom.window.document.querySelector('#add-google').href = googleCalendarLink(content.event, content.venue);
+        dom.window.document.querySelector('#add-calendar').href = googleCalendarLink(content.event, content.venue);
         return dom.serialize();
       },
     },

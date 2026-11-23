@@ -10,8 +10,10 @@ import { content } from './content.js';
 import { startCountdown, getCountdown } from './countdown.js';
 import { startGlitch, countdownVariants } from './easter/glitch.js';
 import { setupEasterEggs } from './easter/reward.js';
+import { calendarTarget, applyCalendarTarget } from './calendar-button.js';
 
 startCountdown(document.querySelector('#countdown'), content.event);
+applyCalendarTarget(calendarTarget(navigator.userAgent, navigator.maxTouchPoints));
 import { mountTally } from './tally.js';
 
 const tallyContainer = document.querySelector('#tally-container');
