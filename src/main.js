@@ -6,9 +6,7 @@ import '@fontsource/jetbrains-mono/latin-400.css';
 import '@fontsource/jetbrains-mono/latin-600.css';
 import './styles/main.css';
 import { content } from './content.js';
-import { renderPage } from './render.js';
-
-renderPage(content);
+// Content is prerendered into index.html by the Vite plugin (vite.config.js).
 import { startCountdown } from './countdown.js';
 import { buildIcs, downloadIcs } from './ics.js';
 

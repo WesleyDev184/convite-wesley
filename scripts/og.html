@@ -1,0 +1,41 @@
+<!doctype html>
+<!-- Fonte da imagem de prévia (public/og.png). Regenerar: abrir em 1200×630 e capturar a tela. -->
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  @font-face { font-family: 'Bebas Neue'; src: url('../node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff2'); }
+  @font-face { font-family: 'Cormorant Garamond'; font-style: italic; src: url('../node_modules/@fontsource/cormorant-garamond/files/cormorant-garamond-latin-500-italic.woff2'); }
+  @font-face { font-family: 'JetBrains Mono'; src: url('../node_modules/@fontsource/jetbrains-mono/files/jetbrains-mono-latin-400-normal.woff2'); }
+  html, body { margin: 0; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: radial-gradient(70% 90% at 30% 50%, #1a0d10 0%, #08080a 70%); color: #f3ead7; display: flex; align-items: center; gap: 70px; padding: 0 90px; box-sizing: border-box; }
+  svg { width: 420px; height: 420px; flex: none; filter: drop-shadow(0 30px 60px rgba(0,0,0,.7)); }
+  .side { font: 28px 'Bebas Neue'; letter-spacing: .3em; color: #c9464f; }
+  .name { font: 150px/0.9 'Bebas Neue'; letter-spacing: .05em; margin: 8px 0 6px; }
+  .tour { font: italic 500 58px 'Cormorant Garamond'; color: #f3ead7; }
+  .course { font: 20px 'JetBrains Mono'; letter-spacing: .12em; color: #d6b46a; text-transform: uppercase; margin-top: 14px; }
+  .date { font: 26px 'JetBrains Mono'; letter-spacing: .15em; margin-top: 30px; }
+</style>
+</head>
+<body>
+  <svg viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="98" fill="#131316"/>
+    <g fill="none" stroke="#26262b" stroke-width="1">
+      <circle cx="100" cy="100" r="90"/><circle cx="100" cy="100" r="80"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="60"/><circle cx="100" cy="100" r="50"/>
+    </g>
+    <path d="M28 62 A80 80 0 0 1 62 26" stroke="#fff" stroke-opacity=".1" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="36" fill="#d6b46a"/>
+    <circle cx="100" cy="100" r="31" fill="none" stroke="#c9464f" stroke-width="1.2"/>
+    <text x="100" y="94" text-anchor="middle" font-family="Bebas Neue" font-size="13" fill="#0d0d0f" letter-spacing="1">WESLEY</text>
+    <text x="100" y="114" text-anchor="middle" font-family="JetBrains Mono" font-size="4.6" fill="#0d0d0f">CIÊNCIA DA COMPUTAÇÃO</text>
+    <circle cx="100" cy="100" r="3" fill="#08080a"/>
+  </svg>
+  <div>
+    <div class="side">Lado A · Convite</div>
+    <div class="name">WESLEY</div>
+    <div class="tour">The Graduation Tour</div>
+    <div class="course">Bacharel em Ciência da Computação</div>
+    <div class="date">16 · JAN · 2027 · 19H</div>
+  </div>
+</body>
+</html>
