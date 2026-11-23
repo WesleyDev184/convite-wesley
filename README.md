@@ -20,6 +20,14 @@ npm run build    # gera dist/
 npm run preview  # serve o dist/ em http://localhost:4173
 ```
 
+## Easter eggs
+
+- **Troca aleatória:** a cada 12–25s, a contagem, a data ou o curso mudam por 4s (segundos, binário, cafés, Unix time, dica do código). Os textos ficam em `src/easter/glitch.js` e `content.easter`.
+- **Código Konami** (↑ ↑ ↓ ↓ ← → ← → B A): no teclado ou, no celular, tocando 3x no equalizador da Faixa 04 para abrir o controle. Quem acerta ganha o link do **brinde misterioso** no WhatsApp.
+- **Dicas:** a troca aleatória às vezes mostra o código; P.S. no encerramento; mensagem no console do navegador.
+- **Número do WhatsApp:** vem da variável `VITE_WHATSAPP_NUMBER` (DDI + DDD + número, só dígitos). Localmente fica em `.env.local` (fora do git; modelo em `.env.example`). **Na Vercel:** Project → Settings → Environment Variables → `VITE_WHATSAPP_NUMBER`, e faça um novo deploy. Sem a variável, o prêmio mostra "Mostre esta tela para o Wesley na festa".
+- Atenção: num site estático o número entra no JS publicado (some do repositório, mas quem inspecionar o JS do site acha). Para esconder de verdade, seria preciso uma função serverless que redireciona para o WhatsApp.
+
 ## Publicar (Vercel)
 
 1. Suba o repositório para o GitHub e importe em https://vercel.com/new (framework: **Vite**, output: `dist`). Ou rode `npx vercel` nesta pasta.

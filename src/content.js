@@ -34,6 +34,10 @@ export const content = {
   },
   credits:
     'Obrigado por fazer parte dessa conquista. Nos vemos lá!',
+  easter: {
+    familyCourse: 'Bacharel em Ciência da Computação (versão para a família)',
+    whatsappMessage: 'Desbloqueei o código secreto do convite! Quero meu brinde misterioso 🎁',
+  },
   og: {
     title: 'Wesley · The Graduation Tour',
     description: 'Você está convidado para a formatura em Ciência da Computação — 16/01/2027, 19h.',

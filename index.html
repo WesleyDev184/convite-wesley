@@ -164,8 +164,32 @@
         <p class="section-label">ENCARTE</p>
         <p class="section-body" data-field="credits"></p>
         <svg class="pick" aria-hidden="true"><use href="#pick" /></svg>
+        <p class="ps">P.S.: o equalizador da Faixa 04 esconde um controle.</p>
       </section>
     </main>
+
+    <div id="gamepad" class="gamepad" role="group" aria-label="Controle secreto" hidden>
+      <div class="dpad">
+        <button type="button" class="pad-up" data-key="up" aria-label="Cima">▲</button>
+        <button type="button" class="pad-left" data-key="left" aria-label="Esquerda">◀</button>
+        <button type="button" class="pad-right" data-key="right" aria-label="Direita">▶</button>
+        <button type="button" class="pad-down" data-key="down" aria-label="Baixo">▼</button>
+      </div>
+      <div class="ab">
+        <button type="button" data-key="b">B</button>
+        <button type="button" data-key="a">A</button>
+      </div>
+      <button type="button" class="pad-close" data-close aria-label="Fechar controle">×</button>
+    </div>
+
+    <dialog id="reward" class="reward" aria-labelledby="reward-title">
+      <p class="reward-trophy" aria-hidden="true">🏆</p>
+      <h2 id="reward-title">Conquista desbloqueada!</h2>
+      <p>Você achou o código secreto e ganhou um <strong>brinde misterioso</strong>.</p>
+      <a id="reward-link" class="button" target="_blank" rel="noopener" hidden>Resgatar no WhatsApp</a>
+      <p id="reward-fallback" hidden>Mostre esta tela para o Wesley na festa para resgatar.</p>
+      <form method="dialog"><button class="reward-close">Fechar</button></form>
+    </dialog>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
