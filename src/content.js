@@ -4,7 +4,7 @@ export const content = {
   course: 'Bacharel em Ciência da Computação',
   tagline: { title: 'The Graduation Tour', subtitle: 'o último show da turnê' },
   message:
-    'Foram anos de noites em claro, provas, código que não compilava e café que não acabava. Cada pessoa que esteve ao meu lado tocou uma parte dessa música. Agora a última faixa chegou, e eu quero você na plateia.',
+    'Foram anos de noites em claro, provas, código que não compilava e café que não acabava. Nada disso teria sido possível sem as pessoas que estiveram ao meu lado. Agora chegou a hora de celebrar, e eu quero você comigo.',
   event: {
     title: 'Formatura do Wesley — Ciência da Computação',
     start: '2027-01-16T19:00:00-03:00',
@@ -25,14 +25,14 @@ export const content = {
     mapsUrl: 'https://maps.app.goo.gl/Uh7gPGWeX3BZjBfYA',
   },
   rsvp: {
-    title: 'Garanta seu lugar no show',
+    title: 'Confirme sua presença',
     deadlineLabel: 'Confirme até 26/12/2026',
     tallyEmbedUrl:
       'https://tally.so/embed/Qo7JpG?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1',
     tallyFormUrl: 'https://tally.so/r/Qo7JpG',
   },
   credits:
-    'Produzido por anos de estudo. Mixado com a ajuda de vocês. Obrigado por fazerem parte da trilha sonora.',
+    'Obrigado por fazer parte dessa conquista. Nos vemos lá!',
   og: {
     title: 'Wesley · The Graduation Tour',
     description: 'Você está convidado para a formatura em Ciência da Computação — 16/01/2027, 19h.',

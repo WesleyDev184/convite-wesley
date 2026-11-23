@@ -110,9 +110,10 @@ Todo texto e dado do evento fica em um único arquivo `content.js` (objeto expor
 Textos escolhidos:
 
 - **Abertura (1A):** *The Graduation Tour* — o último show da turnê
-- **Mensagem (2A):** "Foram anos de noites em claro, provas, código que não compilava e café que não acabava. Cada pessoa que esteve ao meu lado tocou uma parte dessa música. Agora a última faixa chegou, e eu quero você na plateia."
-- **Chamada da confirmação (3A):** Garanta seu lugar no show — abaixo: "Confirme até 26/12/2026"
-- **Encerramento (4A):** "Produzido por anos de estudo. Mixado com a ajuda de vocês. Obrigado por fazerem parte da trilha sonora."
+- **Mensagem (2A):** "Foram anos de noites em claro, provas, código que não compilava e café que não acabava. Nada disso teria sido possível sem as pessoas que estiveram ao meu lado. Agora chegou a hora de celebrar, e eu quero você comigo."
+- **Chamada da confirmação:** Confirme sua presença — abaixo: "Confirme até 26/12/2026"
+- **Encerramento:** "Obrigado por fazer parte dessa conquista. Nos vemos lá!"
+- **Revisão 2026-11-22 (Wesley):** música só no estilo visual; textos sem metáfora musical (exceto a abertura). Títulos: "Até aqui", "Cronograma", "Local".
 
 ## Integração Tally
 
