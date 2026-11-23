@@ -14,3 +14,12 @@ import { buildIcs, downloadIcs } from './ics.js';
 
 startCountdown(document.querySelector('#countdown'), content.event);
 document.querySelector('#add-calendar').addEventListener('click', () => downloadIcs(buildIcs(content.event, content.venue)));
+import { mountTally } from './tally.js';
+
+const tallyContainer = document.querySelector('#tally-container');
+const tallyObserver = new IntersectionObserver((entries) => {
+  if (!entries.some((e) => e.isIntersecting)) return;
+  tallyObserver.disconnect();
+  mountTally(tallyContainer, { embedUrl: content.rsvp.tallyEmbedUrl, formUrl: content.rsvp.tallyFormUrl });
+}, { rootMargin: '800px' });
+tallyObserver.observe(document.querySelector('#lado-b'));
