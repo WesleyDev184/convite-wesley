@@ -29,3 +29,17 @@ describe('buildIcs', () => {
     expect(ics).toMatch(/\r\nDTSTAMP:\d{8}T\d{6}Z\r\n/);
   });
 });
+
+describe('googleCalendarLink', () => {
+  it('prefills title, UTC dates, location and maps link', async () => {
+    const { googleCalendarLink } = await import('../src/ics.js');
+    const url = new URL(googleCalendarLink(content.event, content.venue));
+    expect(url.origin + url.pathname).toBe('https://calendar.google.com/calendar/render');
+    expect(url.searchParams.get('action')).toBe('TEMPLATE');
+    expect(url.searchParams.get('text')).toBe('Formatura do Wesley — Ciência da Computação');
+    expect(url.searchParams.get('dates')).toBe('20270116T220000Z/20270117T030000Z');
+    expect(url.searchParams.get('location')).toBe('Loja Maçônica Acácia do Araguaia');
+    expect(url.searchParams.get('details')).toBe('Mapa: https://maps.app.goo.gl/Uh7gPGWeX3BZjBfYA');
+    expect(url.search).toContain('dates=20270116T220000Z/20270117T030000Z');
+  });
+});

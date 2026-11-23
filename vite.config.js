@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { JSDOM } from 'jsdom';
 import { content } from './src/content.js';
 import { renderPage } from './src/render.js';
-import { buildIcs } from './src/ics.js';
+import { buildIcs, googleCalendarLink } from './src/ics.js';
 
 const ICS_FILE = 'formatura-wesley.ics';
 
@@ -32,6 +32,7 @@ function convite() {
           .replaceAll('%SITE_URL%', escapeAttr(content.siteUrl));
         const dom = new JSDOM(withMeta);
         renderPage(content, dom.window.document);
+        dom.window.document.querySelector('#add-google').href = googleCalendarLink(content.event, content.venue);
         return dom.serialize();
       },
     },

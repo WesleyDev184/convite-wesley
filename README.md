@@ -50,6 +50,6 @@ A imagem é gerada a partir de `scripts/og.html`. Para regenerar, abra esse arqu
 
 - `index.html`: marcação e SVGs (vinil, braço, equalizador, ícones).
 - `vite.config.js`: injeta os textos de `content.js` e as meta tags no HTML durante o build. A página funciona mesmo sem JS.
-- `src/countdown.js` (horário de Brasília) e `src/ics.js` (botão "Adicionar à agenda").
+- `src/countdown.js` (horário de Brasília) e `src/ics.js` (agenda: link do Google Agenda + arquivo `.ics` para iPhone/Outlook, ambos gerados no build).
 - `src/tally.js`: carrega o form só quando o convidado se aproxima do Lado B.
 - `src/motion/`: animações (GSAP + Lenis). Com "reduzir movimento" ativado no celular, ficam só fades.
